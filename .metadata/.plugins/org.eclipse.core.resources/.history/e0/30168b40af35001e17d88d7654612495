@@ -1,0 +1,8 @@
+package vehicle;
+
+public interface VehicleCategory {
+	
+	void go();
+	void repair();
+	void fall();
+}

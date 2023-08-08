@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.springframework.org/schema/beans"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean class="bicycleComponent.Bicycle" name="by1">
+		<property name="name">
+			<value>세발자전거</value>
+		</property>
+		<property name="hd">
+			<ref bean="hd1" />
+		</property>
+		<property name="whs">
+			<ref bean="whss" />
+		</property>
+	</bean>
+	<bean class="bicycleComponent.Bicycle" name="by2">
+		<property name="name">
+			<value>포카리자전거</value>
+		</property>
+		<property name="hd">
+			<ref bean="hds" />
+		</property>
+		<property name="whs">
+			<ref bean="whss" />
+		</property>
+		<property name="bk">
+			<ref bean="bks" />
+		</property>
+	</bean>
+	<bean class="bicycleComponent.Bicycle" name="by3">
+		<property name="name">
+			<value>MTB</value>
+		</property>
+		<property name="hd">
+			<ref bean="hds" />
+		</property>
+		<property name="whs">
+			<ref bean="bks" />
+		</property>
+	</bean>
+	<bean class="bicycleComponent.Wheel" name="whss">
+		<property name="whs" value="1" />
+	</bean>
+	<bean class="bicycleComponent.Handle" name="hds">
+		<property name="hd" value="핸들" />
+	</bean>
+	<bean class="bicycleComponent.Basket" name="bks">
+		<property name="bk" value="내 바구니" />
+	</bean>
+</beans>

@@ -1,0 +1,19 @@
+package bicycleComponent;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class BicycleMove {
+
+	public static void main(String[] args) {
+		AbstractApplicationContext context =
+				new ClassPathXmlApplicationContext("di_xml/bicycle.xml");
+		Bicycle thrBy = (Bicycle)context.getBean("thrBy");
+		Bicycle poBy = (Bicycle)context.getBean("poBy");
+		Bicycle mtb = (Bicycle)context.getBean("mtb");
+		System.out.println(thrBy);
+		System.out.println(poBy);
+		System.out.println(mtb);
+	}
+
+}

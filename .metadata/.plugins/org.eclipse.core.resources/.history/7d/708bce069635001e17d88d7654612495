@@ -1,0 +1,9 @@
+package di_p;
+
+public class DI_main {
+	public static void main(String[] args) {
+		HandPhone hp1 = new HandPhone();
+		
+		System.out.println(hp1);
+	}
+}

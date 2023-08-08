@@ -1,0 +1,17 @@
+package vehicle;
+
+public class Handle {
+	String hd;
+
+	public String getHd() {
+		return hd;
+	}
+
+	public void setHd(String hd) {
+		this.hd = hd;
+	}
+	@Override
+	public String toString() {
+		return "Handle [hd=" + hd + "]";
+	}
+}

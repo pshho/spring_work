@@ -1,0 +1,7 @@
+package move;
+
+public interface Move {
+	public void go();
+	public void repair();
+	public void fall();
+}

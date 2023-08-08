@@ -1,0 +1,21 @@
+package vehicle;
+
+import move.Move;
+
+public class Bicycle implements Move {
+	String name;
+	Handle hd;
+	Wheel wh;
+	@Override
+	public void go() {
+		System.out.println("자전거가 간다");
+	}
+	@Override
+	public void repair() {
+		System.out.println("자전거를 고친다");
+	}
+	@Override
+	public void fall() {
+		
+	}
+}

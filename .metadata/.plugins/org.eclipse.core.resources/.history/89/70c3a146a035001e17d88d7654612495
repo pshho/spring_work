@@ -1,0 +1,6 @@
+package bicycleComponent;
+
+public class Basket {
+	int[] bk;
+	String bkName;
+}

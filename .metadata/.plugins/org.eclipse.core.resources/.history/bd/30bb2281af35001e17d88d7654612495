@@ -1,0 +1,9 @@
+package vehicle;
+
+public interface VehicleCategory {
+	String category = "분류";
+	
+	void go();
+	void repair();
+	void fall();
+}

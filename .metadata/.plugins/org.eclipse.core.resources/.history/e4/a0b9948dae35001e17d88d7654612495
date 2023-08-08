@@ -1,0 +1,9 @@
+package vehicle;
+
+public interface VehicleCategory {
+	public static final String name = "";
+	
+	void go();
+	void repair();
+	void fall();
+}

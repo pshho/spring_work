@@ -1,0 +1,52 @@
+package bicycleComponent;
+
+import java.util.Arrays;
+
+import move.Action;
+
+public class MTBBicycle implements Action {
+	String name;
+	Handle hd;
+	Wheel[] whs;
+	Basket bk;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Handle getHd() {
+		return hd;
+	}
+	public void setHd(Handle hd) {
+		this.hd = hd;
+	}
+	public Wheel[] getWhs() {
+		return whs;
+	}
+	public void setWhs(Wheel[] whs) {
+		this.whs = whs;
+	}
+	public Basket getBk() {
+		return bk;
+	}
+	public void setBk(Basket bk) {
+		this.bk = bk;
+	}
+	@Override
+	public String toString() {
+		return "Bicycle [name=" + name + ", hd=" + hd + ", whs=" + Arrays.toString(whs) + ", bk=" + bk + "]";
+	}
+	@Override
+	public void go() {
+		System.out.println(name+"가 아주 빠르게 달립니다");
+	}
+	@Override
+	public void repair() {
+		System.out.println(name+"를 고칠거에요\n"+"산악 자전거라 바퀴 값이 비싸요");
+	}
+	@Override
+	public void fall() {
+		System.out.println(name+"는 쓰러지지 않아요");
+	}
+}

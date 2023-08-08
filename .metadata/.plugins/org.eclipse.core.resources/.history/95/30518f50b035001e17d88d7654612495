@@ -1,0 +1,25 @@
+package vehiclesBicycle;
+
+import vehicle.VehicleCategory;
+
+public class Bicycle implements VehicleCategory {
+	
+	@Override
+	public void go() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void repair() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void fall() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

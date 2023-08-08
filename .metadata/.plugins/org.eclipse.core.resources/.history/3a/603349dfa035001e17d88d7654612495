@@ -1,0 +1,17 @@
+package bicycleComponent;
+
+import java.util.Arrays;
+
+public class Wheel {
+	int whs;
+	public int getWhs() {
+		return whs;
+	}
+	public void setWhs(int whs) {
+		this.whs = whs;
+	}
+	@Override
+	public String toString() {
+		return "Wheel [whs=" + Arrays.toString(whs) + "]";
+	}
+}

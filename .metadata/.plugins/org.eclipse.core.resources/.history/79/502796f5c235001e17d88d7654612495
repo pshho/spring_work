@@ -1,0 +1,7 @@
+package bicycleComponent;
+
+public class Basket {
+	String name, kind;
+	
+	
+}
