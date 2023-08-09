@@ -1,0 +1,12 @@
+package schools;
+
+public class School {
+	String name;
+	Student[] students;
+	Classes[] classess;
+	
+	public School(String name, Classes... classess) {
+		this.name = name;
+		this.classess = classess;
+	}
+}

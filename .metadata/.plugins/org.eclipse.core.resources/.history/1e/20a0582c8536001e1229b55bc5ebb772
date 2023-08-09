@@ -1,0 +1,10 @@
+package schools;
+
+public class School {
+	String name;
+	Classes[] classess;
+	
+	public School(Classes... classess) {
+		
+	}
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.springframework.org/schema/beans"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<!-- 한 사람의 이름, 과목(국, 영, 수)의 점수 -->
+	<bean class="schools.Student" name="std1">
+		<constructor-arg>
+			<list>
+				<map>
+					<entry>
+						<key><value>국어</value></key>
+						<value>73</value>
+					</entry>
+				</map>
+				<map>
+					<entry>
+						<key><value>영어</value></key>
+						<value>65</value>
+					</entry>
+				</map>
+				<map>
+					<entry>
+						<key><value>수학</value></key>
+						<value>82</value>
+					</entry>
+				</map>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	
+	<bean class="bicycleComponent.Handle" name="hds">
+		<property name="hd" value="핸들" />
+	</bean>
+	<bean class="bicycleComponent.Basket" name="bks">
+		<property name="bk" value="내 바구니" />
+	</bean>
+</beans>

@@ -2,7 +2,7 @@ package bicycleComponent;
 
 import java.util.Arrays;
 
-import move.Action;
+import inter.Action;
 
 public class MTBBicycle implements Action {
 	String name;

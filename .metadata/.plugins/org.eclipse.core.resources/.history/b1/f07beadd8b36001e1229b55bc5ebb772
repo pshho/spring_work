@@ -1,0 +1,32 @@
+package schools;
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class Student {
+	String name;
+	Map<String, Integer> subjects;
+	int sum, classesRank, sumRank;
+	double avg;
+	
+	public Student(String name, Map<String, Integer> subjects) {
+		this.name = name;
+		this.subjects = subjects;
+		calc();
+	}
+	void calc() {
+		Iterator<Entry<String, Integer>> values = subjects.entrySet().iterator();
+		while(values.hasNext()) {
+			Entry<String, Integer> val = values.next();
+			int score = val.getValue();
+			sum += score;
+		}
+		avg = (double)sum / subjects.size();
+	}
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", subjects=" + subjects + ", sum=" + sum + ", classesRank=" + classesRank + ", sumRank="
+				+ sumRank + ", avg=" + avg + "]\n";
+	}
+}

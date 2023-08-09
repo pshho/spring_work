@@ -1,0 +1,55 @@
+package schools;
+
+import java.util.Arrays;
+
+public class Classes implements Comparable<Classes> {
+	String name;
+	Student[] students;
+	int totalClassRank;
+	
+	public Classes(String name, Student... students) {
+		this.name = name;
+		this.students = students;
+		rankCalc();
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Student[] getStudents() {
+		return students;
+	}
+	public void setStudents(Student[] students) {
+		this.students = students;
+	}
+	public int getTotalClassRank() {
+		return totalClassRank;
+	}
+	public void setTotalClassRank(int totalClassRank) {
+		this.totalClassRank = totalClassRank;
+	}
+	void rankCalc() {
+		
+		for(Student std : students) {
+			int count = 1;
+			for(Student sd : students) {
+				if(std.avg < sd.avg) {
+					count++;
+				}
+			}
+			
+			std.classesRank = count;
+		}
+	}
+	@Override
+	public String toString() {
+		return "Classes [name=" + name + ", totalClassRank=" + totalClassRank + ",\n students="
+				+ Arrays.toString(students) + "]";
+	}
+	@Override
+	public int compareTo(Classes o) {
+		return Integer.compare(getStudents()[0].classesRank, o.getStudents()[0].classesRank);
+	}
+}
