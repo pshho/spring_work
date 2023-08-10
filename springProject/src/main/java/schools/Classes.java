@@ -28,6 +28,12 @@ public class Classes {
 	public void setTotalClassRank(int totalClassRank) {
 		this.totalClassRank = totalClassRank;
 	}
+	public List<Student> getStudents() {
+		return students;
+	}
+	public void setStudents(List<Student> students) {
+		this.students = students;
+	}
 	void rankCalc() {
 		
 		for(Student std : students) {

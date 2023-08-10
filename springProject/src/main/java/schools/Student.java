@@ -4,11 +4,15 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public class Student implements Comparable<Student> {
+import inter.Quick;
+
+public class Student implements Quick<Student> {
 	String name;
 	Map<String, Integer> subjects;
 	int sum, classesRank, sumRank;
 	double avg;
+	
+	public Student() {};
 	
 	public Student(String name, Map<String, Integer> subjects) {
 		this.name = name;
@@ -65,8 +69,12 @@ public class Student implements Comparable<Student> {
 		return "Student [name=" + name + ", subjects=" + subjects + ", sum=" + sum + ", classesRank=" + classesRank + ", sumRank="
 				+ sumRank + ", avg=" + avg + "]\n";
 	}
+//	@Override
+//	public int compareTo(Student o) {
+//		return Integer.compare(sum, o.sum);
+//	}
 	@Override
-	public int compareTo(Student o) {
-		return Integer.compare(o.sum, sum);
+	public int compare(Student o1, Student o2) {
+		return (o1.sum - o2.sum)*-1;
 	}
 }

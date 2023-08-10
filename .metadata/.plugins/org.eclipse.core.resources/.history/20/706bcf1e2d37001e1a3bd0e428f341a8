@@ -1,0 +1,63 @@
+package di_p;
+
+import java.util.List;
+
+public class AutoCar {
+	Engine eng;
+	List<Wheel> whs;
+	Handle handle;
+	
+	public Engine getEng() {
+		return eng;
+	}
+	public void setEng(Engine eng) {
+		this.eng = eng;
+	}
+	public List<Wheel> getWhs() {
+		return whs;
+	}
+	public void setWhs(List<Wheel> whs) {
+		this.whs = whs;
+	}
+	public Handle getHandle() {
+		return handle;
+	}
+	public void setHandle(Handle handle) {
+		this.handle = handle;
+	}
+	@Override
+	public String toString() {
+		return "AutoCar [eng=" + eng + ", whs=" + whs + ", handle=" + handle + "]";
+	}
+}
+
+class Engine{
+	String name;
+	String power;
+}
+
+class Wheel{
+	String name;
+	int size;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getSize() {
+		return size;
+	}
+	public void setSize(int size) {
+		this.size = size;
+	}
+	@Override
+	public String toString() {
+		return "Wheel [name=" + name + ", size=" + size + "]";
+	}
+}
+
+class Handle{
+	
+}

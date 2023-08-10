@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<bean class="mobile.SmartPhone" name="smp1" autowire="byName" p:name="어른폰" />
+	<bean class="mobile.SmartPhone" name="smp2" autowire="byType" p:name="은하수폰" p:bat-ref="bat1"
+										p:disp-ref="disp1" />
+	<bean class="mobile.SmartPhone" name="smp3" autowire="constructor" p:name="믹스폰" />
+	
+	<!-- 카메라 부품 -->
+	<!--<bean class="mobile.Camera" name="cam1" p:lensKinds="오목렌즈" p:cameraKinds="이안반사식카메라"
+											p:iso="100" />
+	<bean class="mobile.Camera" name="cam2" p:lensKinds="볼록렌즈" p:cameraKinds="일안반사식카메라"
+											p:iso="800" />
+	<bean class="mobile.Camera" name="cam3" p:lensKinds="CCD" p:cameraKinds="이안반사식카메라"
+											p:iso="1600" />
+	<bean class="mobile.Camera" name="cam4" p:lensKinds="CMOS" p:cameraKinds="특수카메라"
+											p:iso="3200" />-->
+											
+	<bean class="java.util.ArrayList" name="cam">
+		<constructor-arg>
+			<list>
+				<ref bean="cam1" />
+				<ref bean="cam2" />
+				<ref bean="cam4" />
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<!-- 액정 부품 -->
+	<bean class="mobile.Display" name="disp" p:displayKinds="LED" 
+								p:filter="Encap" p:pixel="1200" />
+	<bean class="mobile.Display" name="disp1" p:displayKinds="LCD" 
+								p:filter="Cell" p:pixel="800" />
+	
+	<!-- 배터리 부품 -->
+	<bean class="mobile.Battery" name="bat" p:size="500" p:capacity="3000" />
+	<bean class="mobile.Battery" name="bat1" p:size="350" p:capacity="2500" />
+	
+</beans>

@@ -1,0 +1,20 @@
+package mobile;
+
+public class Camera {
+	String lensKinds, cameraKinds;
+	int shutter;
+	
+	public void setLensKinds(String lensKinds) {
+		this.lensKinds = lensKinds;
+	}
+	public void setCameraKinds(String cameraKinds) {
+		this.cameraKinds = cameraKinds;
+	}
+	public void setShutter(int shutter) {
+		this.shutter = shutter;
+	}
+	@Override
+	public String toString() {
+		return "Camera [lensKinds=" + lensKinds + ", cameraKinds=" + cameraKinds + ", shutter=" + shutter + "]";
+	}
+}

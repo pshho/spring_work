@@ -1,0 +1,15 @@
+package diet;
+
+public class Cooking {
+	public FoodMenu breakfast() {
+		return new FoodMenu();
+	}
+	
+	public FoodMenu lunch() {
+		return new FoodMenu();
+	}
+	
+	public FoodMenu dinner() {
+		return new FoodMenu();
+	}
+}

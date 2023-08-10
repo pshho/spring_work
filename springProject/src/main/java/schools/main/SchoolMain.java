@@ -5,6 +5,7 @@ import java.util.TreeSet;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import inter.Quick;
 import schools.Classes;
 import schools.Student;
 
@@ -22,7 +23,6 @@ public class SchoolMain {
 		Classes cla1 = context.getBean("classes1", Classes.class);
 		Classes cla2 = context.getBean("classes2", Classes.class);
 		
-		
 //		int i = 1;
 //		for(Student st : cla2.getStudents()) {
 //			trS.add(st);
@@ -36,10 +36,17 @@ public class SchoolMain {
 //			i++;
 //		}
 		
+//		for(Student cl : context.getBean("classes1", Classes.class).getSet()) {
+//			System.out.println(cl);
+//		}
 		
-		for(Student cl : context.getBean("classes1", Classes.class).getSet()) {
-			System.out.println(cl);
+		Quick<Student> qik = new Student();
+		qik.quickDistinct(0, cla1.getStudents().size(), cla1.getStudents());
+		
+		for(int i=0; i<cla1.getStudents().size(); i++) {
+			System.out.println(cla1.getStudents().get(i));
 		}
+
 	}
 
 }

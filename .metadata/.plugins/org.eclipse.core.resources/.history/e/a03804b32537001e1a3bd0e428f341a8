@@ -1,0 +1,8 @@
+package diet;
+
+public class Cooking {
+	public DinnerMenu breakfast() {
+		System.out.println("오늘은 즐거운 아침을 먹어요");
+		return new DinnerMenu("쌀밥", "소고기무국", "멸치", "계란말이");
+	}
+}

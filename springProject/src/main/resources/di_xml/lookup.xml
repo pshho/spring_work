@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.springframework.org/schema/beans"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean class="di_p.CoffeeShop" name="cof1">
+		<lookup-method name="order_am" bean="cof2" />
+		<!-- void return 불가 에러 발생 X -->
+		<lookup-method name="order_void" bean="cof2" />
+		<!-- return 자료형이 다름 에러 발생 -->
+		<!--<lookup-method name="order_tea" bean="cof2" />-->
+		<!-- private, final, static은 lookup-method 적용 X -->
+		<lookup-method name="order_private" bean="cof2" />
+		<lookup-method name="order_final" bean="cof2" />
+		<lookup-method name="order_static" bean="cof2" />
+		<lookup-method name="order_piano" bean="cof2" />
+		
+		<!-- 추상 method 재정의 -->
+		<lookup-method name="order_hunter" bean="cof2" />
+	</bean>
+	
+	<bean class="di_p.Coffee" name="cof2">
+		<constructor-arg value="아샷추" />
+		<constructor-arg value="3500" />
+	</bean>
+</beans>

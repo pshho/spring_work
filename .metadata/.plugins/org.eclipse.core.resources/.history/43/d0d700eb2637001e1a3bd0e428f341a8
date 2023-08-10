@@ -1,0 +1,11 @@
+package diet;
+
+public class Cooking {
+	String msg = null;
+	
+	public DinnerMenu serving() {
+		msg = "오늘은 즐거운 아침을 먹을거에요\n오늘의 메뉴는 ";
+		System.out.println(msg);
+		return new DinnerMenu();
+	}
+}

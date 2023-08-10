@@ -1,0 +1,10 @@
+package diet;
+
+public class Cooking {
+	String msg = null;
+	
+	public DinnerMenu serving() {
+		System.out.println(msg);
+		return new DinnerMenu();
+	}
+}

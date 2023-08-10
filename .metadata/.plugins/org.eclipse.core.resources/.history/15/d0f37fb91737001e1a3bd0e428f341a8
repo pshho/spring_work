@@ -1,0 +1,10 @@
+package di_p;
+
+public class CoffeeShop {
+	
+}
+
+class Coffee {
+	String name;
+	int price;
+}

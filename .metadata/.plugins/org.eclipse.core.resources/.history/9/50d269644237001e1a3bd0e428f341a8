@@ -1,0 +1,25 @@
+package mobile;
+
+public class Camera {
+	String lensKinds, cameraKinds;
+	int pixel;
+	
+	public String getLensKinds() {
+		return lensKinds;
+	}
+	public void setLensKinds(String lensKinds) {
+		this.lensKinds = lensKinds;
+	}
+	public String getCameraKinds() {
+		return cameraKinds;
+	}
+	public void setCameraKinds(String cameraKinds) {
+		this.cameraKinds = cameraKinds;
+	}
+	public int getPixel() {
+		return pixel;
+	}
+	public void setPixel(int pixel) {
+		this.pixel = pixel;
+	}
+}

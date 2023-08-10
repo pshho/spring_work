@@ -1,0 +1,6 @@
+package mobile;
+
+public class Display {
+	String displayKinds, luminous;
+	int pixel;
+}

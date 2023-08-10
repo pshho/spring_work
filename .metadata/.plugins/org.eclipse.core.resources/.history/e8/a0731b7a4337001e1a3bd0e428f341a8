@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean class="di_p.AutoCar" name="car1" p:name="소나타" p:handle-ref="hd1">
+		<property name="eng">
+			<bean class="di_p.Engine" p:name="병렬4기통" p:power="400" />
+		</property>
+	</bean>
+	
+	<!--<bean class="di_p.AutoCar" name="car2" autowire="byType" p:name="말타타" p:handle-ref="handle" />-->
+	<bean class="di_p.AutoCar" name="car3" autowire="byName" p:name="태풍타" />
+	<bean class="di_p.AutoCar" name="car4" autowire="constructor" p:name="칸타타" />
+	
+	<bean class="di_p.Handle" name="hd1" p:name="핸들1" p:type="방탈출용" />
+	<bean class="di_p.Handle" name="handle" p:name="핸들2" p:type="경주용" />
+	
+	<bean class="di_p.Engine" name="eng" p:name="V4기통" p:power="500" />
+	<bean class="di_p.Engine" name="eng1" p:name="VM8기통" p:power="800" />
+	
+	<bean class="di_p.Wheel" name="wh1" p:name="크롬휠" p:size="21" />
+	<bean class="di_p.Wheel" name="wh2" p:name="고무휠" p:size="21" />
+	<bean class="di_p.Wheel" name="wh3" p:name="크라임씬휠" p:size="21" />
+	
+	
+	<bean class="java.util.ArrayList" name="whs">
+		<constructor-arg>
+			<list>
+				<ref bean="wh2" />
+				<ref bean="wh4" />
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean class="mobile.Camera" name="cam1" p:lensKinds="볼록렌즈" p:cameraKinds="일안반사식카메라"
+											p:shutter="0" />
+	<bean class="mobile.Camera" name="cam" p:lensKinds="오목렌즈" p:cameraKinds="이안반사식카메라"
+											p:shutter="1" />
+	
+</beans>

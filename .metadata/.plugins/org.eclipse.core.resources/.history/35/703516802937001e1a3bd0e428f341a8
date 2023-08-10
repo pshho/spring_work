@@ -1,0 +1,10 @@
+package diet;
+
+public class Dinner {
+	String rice, mainDish1, mainDish2, sideDish1, sideDish2, soup, dessert;
+	
+	public Dinner() {
+		super();
+	}
+	
+}

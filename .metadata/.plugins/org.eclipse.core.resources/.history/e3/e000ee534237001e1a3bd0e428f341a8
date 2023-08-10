@@ -1,0 +1,6 @@
+package mobile;
+
+public class Camera {
+	String lensKinds, film, cameraKinds;
+	int pixel;
+}

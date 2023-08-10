@@ -1,0 +1,29 @@
+package mobile;
+
+public class Camera {
+	String lensKinds, cameraKinds;
+	int shutter;
+	
+	public void setLensKinds(String lensKinds) {
+		this.lensKinds = lensKinds;
+	}
+	public void setCameraKinds(String cameraKinds) {
+		this.cameraKinds = cameraKinds;
+	}
+	public void setShutter(int shutter) {
+		this.shutter = shutter;
+	}
+	public String getShutter() {
+		String msg = "대기";
+		if(shutter == 1) {
+			msg = "촬영";
+			return msg;
+		}else {
+			return msg;
+		}
+	}
+	@Override
+	public String toString() {
+		return "Camera [lensKinds=" + lensKinds + ", cameraKinds=" + cameraKinds + ", shutter=" + shutter + "]";
+	}
+}

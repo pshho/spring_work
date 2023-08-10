@@ -1,0 +1,16 @@
+package mobile;
+
+public class Display {
+	String displayKinds, luminous;
+	int pixel;
+	
+	public void setDisplayKinds(String displayKinds) {
+		this.displayKinds = displayKinds;
+	}
+	public void setLuminous(String luminous) {
+		this.luminous = luminous;
+	}
+	public void setPixel(int pixel) {
+		this.pixel = pixel;
+	}
+}

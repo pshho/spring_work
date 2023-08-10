@@ -1,0 +1,5 @@
+package diet;
+
+public class DinnerMenu {
+	String rice, soup, side, sideDish;
+}

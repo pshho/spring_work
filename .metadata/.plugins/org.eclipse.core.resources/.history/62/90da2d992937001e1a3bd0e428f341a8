@@ -1,0 +1,28 @@
+package diet;
+
+public class Dinner {
+	String rice, mainDish1, mainDish2, sideDish1, sideDish2, soup, dessert;
+	
+	public Dinner() {
+		super();
+	}
+
+	public Dinner(String rice, String mainDish1, String mainDish2, String sideDish1, String sideDish2, String soup,
+			String dessert) {
+		super();
+		this.rice = rice;
+		this.mainDish1 = mainDish1;
+		this.mainDish2 = mainDish2;
+		this.sideDish1 = sideDish1;
+		this.sideDish2 = sideDish2;
+		this.soup = soup;
+		this.dessert = dessert;
+	}
+
+	@Override
+	public String toString() {
+		return "Dinner [rice=" + rice + ", mainDish1=" + mainDish1 + ", mainDish2=" + mainDish2 + ", sideDish1="
+				+ sideDish1 + ", sideDish2=" + sideDish2 + ", soup=" + soup + ", dessert=" + dessert + "]";
+	}
+	
+}

@@ -1,0 +1,15 @@
+package diet;
+
+public class Cooking {
+	public Breakfast breakfast() {
+		return new Breakfast();
+	}
+	
+	public Breakfast lunch() {
+		return new Lunch();
+	}
+	
+	public Breakfast dinner() {
+		return new Breakfast();
+	}
+}

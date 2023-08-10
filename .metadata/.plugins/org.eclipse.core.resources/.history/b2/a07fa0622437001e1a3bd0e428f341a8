@@ -1,0 +1,5 @@
+package diet;
+
+public class Breakfast {
+	String rice, soup, side, sideDish;
+}
