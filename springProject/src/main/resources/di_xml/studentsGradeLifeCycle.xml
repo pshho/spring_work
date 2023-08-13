@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean class="studentsGrade.MyBeanPostProcessor" />
+	<bean class="studentsGrade.Student" name="redbawee" p:name="난 학생1" p:score="77,78,94" />
+	<bean class="studentsGrade.Student" name="red1232" p:name="난 학생2" p:score="17,52,73" />
+	<bean class="studentsGrade.Student" name="blueagwegew" p:name="난 학생3" p:score="25,71,59" />
+	<bean class="studentsGrade.Student" name="blue#@%#@" p:name="난 학생4" p:score="97,86,40" />
+	<bean class="studentsGrade.Student" name="yellowwaeio" p:name="난 학생5" p:score="42,66,81" />
+	<bean class="studentsGrade.MyBeanFactoryPostProcessor" />
+</beans>

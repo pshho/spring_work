@@ -1,0 +1,6 @@
+package studentsGrade;
+
+public class Student {
+	String name, grade;
+	int[] score;
+}

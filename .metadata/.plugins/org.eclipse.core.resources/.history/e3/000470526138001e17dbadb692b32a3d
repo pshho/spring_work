@@ -1,0 +1,21 @@
+package coffee;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class CoffeeIngredient {
+	@Autowired
+	@Qualifier("kIngre")
+	Map<String, Map<String, Integer>> kindsIngrePrice;
+
+	public void setKindsIngrePrice(Map<String, Map<String, Integer>> kindsIngrePrice) {
+		this.kindsIngrePrice = kindsIngrePrice;
+	}
+
+	@Override
+	public String toString() {
+		return "CoffeeIngredient [kindsIngrePrice=" + kindsIngrePrice + "]";
+	}
+}

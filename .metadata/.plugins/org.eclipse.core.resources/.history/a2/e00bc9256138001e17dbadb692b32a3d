@@ -1,0 +1,15 @@
+package coffee;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class CoffeeIngredient {
+	@Autowired(required = false)
+	Map<String, Map<String, Integer>> kindsIngrePrice;
+
+	@Override
+	public String toString() {
+		return "CoffeeIngredient [kindsIngrePrice=" + kindsIngrePrice + "]";
+	}
+}

@@ -1,0 +1,33 @@
+package coffee.lifecycle;
+
+import java.util.Map;
+
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.config.BeanPostProcessor;
+
+import coffee.Coffee;
+
+public class CoffeeBeanPostProcessor implements BeanPostProcessor {
+	@Override
+	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+		if(bean.getClass().getName().equals("coffee.Coffee")) {
+			Coffee coff = (Coffee)bean;
+			
+			for(Map.Entry<String, Integer> cof : coff.cofs.entrySet()) {
+				if(cof.getKey().equals("아샷추")) {
+					System.out.println(cof);
+					
+					for(Map.Entry<String, Integer> co : coff.cfb.kindsPrice.entrySet()) {
+						if(co.getKey().equals("에티오피아")) {
+							System.out.println(co);
+						}
+					}
+					
+					coff.cfingre.kindsIngrePrice.get("액상류");					
+				}
+			}
+		}
+		
+		return BeanPostProcessor.super.postProcessBeforeInitialization(bean, beanName);
+	}
+}

@@ -1,0 +1,10 @@
+package anno_p;
+
+public class WashingMachine {
+	
+}
+
+class Motor{
+	String name;
+	int power;
+}

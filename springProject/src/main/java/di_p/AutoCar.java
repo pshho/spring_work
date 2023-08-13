@@ -5,19 +5,19 @@ import java.util.List;
 public class AutoCar {
 	String name;
 	Engine eng;
-	List<Wheel> whs;
+	List<Wheel> whsqwe;
 	Handle handle;
 	
 	public AutoCar() {
 		System.out.println("기본 생성자");
 	}
 	// 매개변수로 받을 때 에러가 발생되는 경우 동작 X
-	public AutoCar(Engine eng, List<Wheel> whs, Handle hdd) {
+	public AutoCar(Engine eng, List<Wheel> whsqwe, Handle handle) {
 		super();
 		System.out.println("생성자1");
 		this.eng = eng;
-		this.whs = whs;
-		this.handle = hdd;
+		this.whsqwe = whsqwe;
+		this.handle = handle;
 	}
 	// 생성자 실행 조건이 모두 충족할 경우 매개변수가 많은 생성자로 생성
 	// 매개변수 할당 우선순위
@@ -41,11 +41,11 @@ public class AutoCar {
 	public void setEng(Engine eng) {
 		this.eng = eng;
 	}
-	public List<Wheel> getWhs() {
-		return whs;
+	public List<Wheel> getWhsqwe() {
+		return whsqwe;
 	}
-	public void setWhsqwe(List<Wheel> whs) {
-		this.whs = whs;
+	public void setWhsqwe(List<Wheel> whsqwe) {
+		this.whsqwe = whsqwe;
 	}
 	public Handle getHandle() {
 		return handle;
@@ -55,7 +55,7 @@ public class AutoCar {
 	}
 	@Override
 	public String toString() {
-		return "AutoCar [name=" + name + ", eng=" + eng + ", whs=" + whs + ", handle=" + handle + "]";
+		return "AutoCar [name=" + name + ", eng=" + eng + ", whsqwe=" + whsqwe + ", handle=" + handle + "]";
 	}
 }
 

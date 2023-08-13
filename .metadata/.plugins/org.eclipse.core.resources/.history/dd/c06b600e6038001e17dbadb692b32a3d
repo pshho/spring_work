@@ -1,0 +1,49 @@
+package coffee;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import jakarta.annotation.Resource;
+
+public class Coffee {
+	@Autowired(required = false)
+	Map<String, Integer> cofs;
+	
+	CoffeeBeans cfb;
+	CoffeeIngredient cfingre;
+	
+	public void setCofs(Map<String, Integer> cofs) {
+		this.cofs = cofs;
+	}
+	public void setCfb(CoffeeBeans cfb) {
+		this.cfb = cfb;
+	}
+	public void setCfingre(CoffeeIngredient cfingre) {
+		this.cfingre = cfingre;
+	}
+}
+
+class CoffeeBeans{
+	
+	Map<String, Integer> kindsPrice;
+
+	public void setKindsPrice(Map<String, Integer> kindsPrice) {
+		this.kindsPrice = kindsPrice;
+	}
+
+	@Override
+	public String toString() {
+		return "CoffeeBeans [kindsPrice=" + kindsPrice + "]";
+	}
+}
+
+class CoffeeIngredient{
+	@Autowired(required = false)
+	Map<String, Map<String, Integer>> kindsIngrePrice;
+
+	@Override
+	public String toString() {
+		return "CoffeeIngredient [kindsIngrePrice=" + kindsIngrePrice + "]";
+	}
+}
