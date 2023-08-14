@@ -1,0 +1,5 @@
+package anno_p.com;
+
+public class ComputerBody {
+	String name = "삼보트라이젠", cpu="1.33Ghz";
+}

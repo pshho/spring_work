@@ -1,0 +1,9 @@
+package coffeeAssignment.coffeeKinds;
+
+public class CafeLatte {
+	String kinds = "에티오피아";
+	int coffeeBeans = 80;
+	int water = 140;
+	int milk = 180;
+	int price = 3200;
+}

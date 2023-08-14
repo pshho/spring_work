@@ -1,0 +1,21 @@
+package anno_p;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AnnoConfig {
+	@Bean
+	BiHandle hd1() {
+		return new BiHandle("일자핸들", "산악용");
+	}
+	
+	BiWheel wh1() {
+		return null;
+	}
+	
+	@Bean
+	Bicycle mtb() {
+		return null;
+	}
+}

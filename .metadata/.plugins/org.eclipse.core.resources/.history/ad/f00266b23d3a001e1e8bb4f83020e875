@@ -1,0 +1,6 @@
+package anno_p.com;
+
+public class Notebook {
+	ComputerBody cmb;
+	Mouse mouse;
+}

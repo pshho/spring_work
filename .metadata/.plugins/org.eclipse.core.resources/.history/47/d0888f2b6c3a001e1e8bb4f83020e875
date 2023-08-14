@@ -1,0 +1,47 @@
+package coffeeConfig;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import coffeeConfig.ingredient.Caramel;
+import coffeeConfig.ingredient.CoffeeBean;
+import coffeeConfig.ingredient.Milk;
+import coffeeConfig.ingredient.Water;
+
+@Configuration
+public class Coffees {
+	@Bean
+	Water wt1() {
+		return new Water(240);
+	}
+	
+	@Bean
+	CoffeeBean cfB1() {
+		return new CoffeeBean("콜롬비아", 80);
+	}
+	
+	@Bean
+	Milk mik1() {
+		return new Milk();
+	}
+	
+	@Bean
+	Caramel crm1() {
+		return new Caramel();
+	}
+	
+	@Bean
+	Coffee americano(CoffeeBean cfb, Water wa){
+		return new Coffee("아메리카노", cfb, wa);
+	}
+	
+	@Bean
+	Coffee cafeLatte(CoffeeBean cfb, Water wa, Milk mik){
+		return new Coffee("카페라떼", cfb, wa, mik);
+	}
+	
+	@Bean
+	Coffee caramelMacchiato(CoffeeBean cfb, Water wa, Caramel crm){
+		return new Coffee("아메리카노", cfb, wa, crm);
+	}
+}

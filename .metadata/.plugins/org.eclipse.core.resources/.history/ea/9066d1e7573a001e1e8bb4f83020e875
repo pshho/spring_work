@@ -1,0 +1,12 @@
+package anno_p.com;
+
+import anno_p.com.sub1.Mouse;
+import anno_p.comabc.Monitor;
+
+public class Workstation {
+	ComputerBody cmb;
+	
+	Monitor mon1, mon2;
+	
+	Mouse mm;
+}

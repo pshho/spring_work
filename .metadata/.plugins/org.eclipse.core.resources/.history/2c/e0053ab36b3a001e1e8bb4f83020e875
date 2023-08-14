@@ -1,0 +1,9 @@
+package coffeeAssignment;
+
+public interface CoffeeInterface<T> {
+	void make();
+	void sell();
+	void event();
+	void orders();
+	Object constructor();
+}

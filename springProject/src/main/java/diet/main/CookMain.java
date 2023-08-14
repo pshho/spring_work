@@ -10,7 +10,7 @@ public class CookMain {
 		AbstractApplicationContext context =
 				new ClassPathXmlApplicationContext("di_xml/dinner.xml","di_xml/dishMenu.xml");
 		
-		Cooking cook = (Cooking)context.getBean("dish");
+		Cooking cook = context.getBean("dish", Cooking.class);
 		System.out.println(cook.breakfast());
 		System.out.println();
 		System.out.println(cook.lunch());

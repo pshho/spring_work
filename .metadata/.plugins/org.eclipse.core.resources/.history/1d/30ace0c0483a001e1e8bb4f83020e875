@@ -1,0 +1,18 @@
+package coffeeAssignment.coffeeKinds;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class CafeLatte {
+	String kinds = "에티오피아";
+	int coffeeBeans = 80;
+	int water = 140;
+	int milk = 180;
+	int price = 3200;
+	
+	@Override
+	public String toString() {
+		return "CafeLatte [kinds=" + kinds + ", coffeeBeans=" + coffeeBeans + ", water=" + water + ", milk=" + milk
+				+ ", price=" + price + "]";
+	}
+}

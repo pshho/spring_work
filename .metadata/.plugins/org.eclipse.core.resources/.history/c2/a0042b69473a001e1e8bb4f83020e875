@@ -1,0 +1,7 @@
+package coffeeAssignment;
+
+public interface Coffee {
+	void make();
+	void sell();
+	void event();
+}

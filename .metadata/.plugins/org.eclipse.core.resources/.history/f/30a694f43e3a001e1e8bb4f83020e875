@@ -1,0 +1,17 @@
+package anno_p.com;
+
+import org.springframework.stereotype.Component;
+
+import anno_p.com.sub1.Mouse;
+
+@Component
+public class Notebook {
+	ComputerBody cmb;
+	Mouse mouse;
+	String name = "삼보그램";
+	
+	@Override
+	public String toString() {
+		return "Notebook [cmb=" + cmb + ", mouse=" + mouse + ", name=" + name + "]";
+	}
+}

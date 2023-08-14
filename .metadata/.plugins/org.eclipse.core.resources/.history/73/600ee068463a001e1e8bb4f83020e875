@@ -1,0 +1,13 @@
+package coffeeAssignment.coffeeKinds;
+
+public class Americano {
+	String kinds = "콜롬비아";
+	int coffeeBeans = 70;
+	int water = 180;
+	int price = 2000;
+	
+	@Override
+	public String toString() {
+		return "Americano [coffeeBeans=" + coffeeBeans + ", capacity=" + capacity + ", price=" + price + "]";
+	}
+}

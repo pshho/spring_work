@@ -1,0 +1,20 @@
+package coffeeConfig.main;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class CoffeeConfigMain {
+
+	public static void main(String[] args) {
+		AbstractApplicationContext context =
+				new ClassPathXmlApplicationContext("anno_xml/coffeeConfig.xml");
+		
+		System.out.println(context.getBean("wt1"));
+		System.out.println(context.getBean("cfB1"));
+		System.out.println(context.getBean("mik1"));
+		System.out.println(context.getBean("crm1"));
+		
+		context.close();
+	}
+
+}

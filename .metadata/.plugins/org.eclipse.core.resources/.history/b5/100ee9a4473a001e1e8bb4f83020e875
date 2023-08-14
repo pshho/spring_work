@@ -1,0 +1,19 @@
+package coffeeAssignment.coffeeKinds;
+
+import org.springframework.stereotype.Component;
+
+import coffeeAssignment.CoffeeInterface;
+
+@Component
+public class Americano implements CoffeeInterface {
+	String kinds = "콜롬비아";
+	int coffeeBeans = 70;
+	int water = 180;
+	int price = 2000;
+	
+	@Override
+	public String toString() {
+		return "Americano [kinds=" + kinds + ", coffeeBeans=" + coffeeBeans + ", water=" + water + ", price=" + price
+				+ "]";
+	}
+}

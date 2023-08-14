@@ -1,0 +1,10 @@
+package anno_p.com;
+
+import anno_p.com.sub1.Mouse;
+import anno_p.com.sub2.Monitor;
+
+public class DeskTop {
+	String name = "";
+	Mouse mouse;
+	Monitor monitor;
+}

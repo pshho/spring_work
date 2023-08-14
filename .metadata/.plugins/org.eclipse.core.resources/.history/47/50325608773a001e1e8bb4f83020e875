@@ -1,0 +1,14 @@
+package anno_p;
+
+public class Bicycle {
+
+}
+
+class BiHandle{
+	String name, type;
+}
+
+class BiWheel{
+	String name;
+	int size;
+}

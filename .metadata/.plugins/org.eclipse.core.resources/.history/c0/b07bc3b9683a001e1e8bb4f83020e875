@@ -1,0 +1,5 @@
+package coffeeConfig.ingredient;
+
+public class Milk {
+
+}

@@ -1,0 +1,6 @@
+package coffeeConfig.ingredient;
+
+public class Caramel {
+	String name = "카라멜";
+	int capacity = 100;
+}

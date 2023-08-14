@@ -1,0 +1,8 @@
+package coffeeAssignment;
+
+public interface CoffeeInterface {
+	void make(String order);
+	void sell(String order);
+	void event(String order);
+	void orders(String order);
+}

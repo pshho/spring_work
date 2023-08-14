@@ -1,0 +1,14 @@
+package anno_p.com;
+
+import org.springframework.stereotype.Component;
+
+import anno_p.com.sub1.Mouse;
+import anno_p.com.sub2.Monitor;
+
+@Component
+public class DESKTop {
+	String name = "오마이피씨";
+	Mouse mouse;
+	Monitor monitor;
+	ComputerBody cmb;
+}
