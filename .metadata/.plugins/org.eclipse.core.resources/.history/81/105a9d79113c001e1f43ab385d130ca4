@@ -1,0 +1,5 @@
+package figure.parts;
+
+public class RightTriangle {
+	public int area, perimeter;
+}

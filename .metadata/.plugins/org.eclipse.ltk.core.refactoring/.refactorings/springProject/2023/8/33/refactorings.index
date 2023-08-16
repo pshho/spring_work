@@ -29,3 +29,28 @@
 1691992612915	Rename type 'coffeeComponentMain'
 1691993313288	Delete element
 1691998889398	Copy compilation unit
+1692150179227	Copy file
+1692150186224	Rename resource 'component.xml'
+1692151311778	Rename type 'AroundDevice'
+1692151320977	Rename package 'aop_p.div'
+1692151346263	Delete element
+1692155508191	Copy file
+1692155561503	Move compilation unit
+1692166014304	Copy file
+1692166052026	Copy compilation unit
+1692167142784	Delete elements
+1692167157276	Delete element
+1692167171908	Delete element
+1692167228022	Delete element
+1692168494792	Copy file
+1692168523548	Copy compilation unit
+1692168539217	Rename type 'Exec'
+1692168594929	Copy compilation unit
+1692168611552	Rename type 'ExecAdvice'
+1692172192206	Copy compilation unit
+1692173848038	Copy file
+1692177415688	Rename type 'Figure'
+1692179116436	Delete element
+1692179142834	Delete element
+1692179162700	Delete element
+1692179165106	Delete element

@@ -1,0 +1,12 @@
+package fishing.fish;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Fishing {
+	public int seaFishing(int bait) {
+		int fish = bait * 5;
+		
+		return fish;
+	}
+}

@@ -1,0 +1,18 @@
+package figure.main;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import figure.Figures;
+
+public class FigureMain {
+
+	public static void main(String[] args) {
+		AbstractApplicationContext context =
+				new ClassPathXmlApplicationContext("aop_xml/figure.xml");
+		
+		Figures fig = context.getBean("figure", Figures.class);
+		System.out.println("직사각형 넓이: " + fig.areaRect(5, 4));
+	}
+
+}

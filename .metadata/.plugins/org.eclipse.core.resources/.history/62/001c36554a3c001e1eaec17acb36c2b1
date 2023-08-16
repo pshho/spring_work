@@ -1,0 +1,35 @@
+package figure.adv;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.springframework.stereotype.Component;
+
+@Component
+public class FigureAdvice {
+	private int sumArea = 0;
+	
+	Object calcRectTri(ProceedingJoinPoint joinPoint) {
+		Object rev = null;
+		System.out.println(joinPoint.getSignature().getName());
+		
+		String ptn1 = ".*Area";
+		String ptn2 = ".*Perimeter";
+		
+		try {
+			rev = joinPoint.proceed();
+			if(joinPoint.getSignature().getName().matches(ptn1)) {
+				if(joinPoint.getSignature().getName().startsWith("circle")) {
+					sumCalc((int)Math.round((double)rev));
+				}else {
+					sumCalc(Integer.parseInt(rev+""));
+				}
+			}
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
+		return rev;
+	}
+	
+	void sumCalc(int area) {
+		sumArea += area;
+	}
+}

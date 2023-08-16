@@ -1,0 +1,9 @@
+package aop_p.main;
+
+public class AroundMain {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

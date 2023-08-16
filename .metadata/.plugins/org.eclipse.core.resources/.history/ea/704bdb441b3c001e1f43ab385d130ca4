@@ -1,0 +1,23 @@
+package figure.main;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import figure.Figures;
+
+public class FigureMain {
+
+	public static void main(String[] args) {
+		AbstractApplicationContext context =
+				new ClassPathXmlApplicationContext("aop_xml/figure.xml");
+		
+		Figures fig = context.getBean("figures", Figures.class);
+		System.out.println("직사각형 넓이: " + fig.areaRect(5, 4));
+		System.out.println("직사각형 둘레: " + fig.perimeterRect(7, 8));
+		System.out.println("직각삼각형 넓이: " + fig.areaRigTri(3, 6));
+		System.out.println("직각삼각형 둘레: " + fig.perimeterRigTri(6, 7, 8));
+		System.out.println("원 넓이: " + fig.areaCircle(11));
+		System.out.println("원 둘레: " + fig.perimeterCircle(12));
+	}
+
+}

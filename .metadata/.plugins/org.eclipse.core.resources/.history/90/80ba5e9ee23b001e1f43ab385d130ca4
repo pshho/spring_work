@@ -1,0 +1,9 @@
+package fishing.main;
+
+public class FishingMain {
+
+	public static void main(String[] args) {
+
+	}
+
+}

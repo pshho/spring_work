@@ -1,0 +1,15 @@
+package fishing.fish;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Fishing {
+	public String seaFishing(int bait) {
+		int fishSize = bait * 5;
+		String fish = "물고기";
+		
+		System.out.println("");
+		
+		return fish;
+	}
+}

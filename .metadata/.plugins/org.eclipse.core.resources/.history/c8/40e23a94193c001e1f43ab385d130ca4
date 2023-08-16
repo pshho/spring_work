@@ -1,0 +1,12 @@
+package figure;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Figures {
+	public int areaRect(int width, int height) {
+		int rectArea = width*height;
+		return rectArea;
+	}
+
+}

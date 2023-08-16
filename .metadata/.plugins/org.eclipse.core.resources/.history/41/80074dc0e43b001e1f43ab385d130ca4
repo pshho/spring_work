@@ -1,0 +1,15 @@
+package fishing.advice;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
+
+@Component("fishAdv")
+@ComponentScan("fishing.fish")
+public class FishingAdvice {
+	Object fishAdvice(ProceedingJoinPoint joinPoint) {
+		Object rev = null;
+		
+		return rev;
+	}
+}

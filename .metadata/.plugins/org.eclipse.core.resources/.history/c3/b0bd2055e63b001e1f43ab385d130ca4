@@ -1,0 +1,21 @@
+package fishing.advice;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.springframework.stereotype.Component;
+
+@Component("fishAdv")
+public class FishingAdvice {
+	Object fishAdvice(ProceedingJoinPoint joinPoint) {
+		Object rev = null;
+		
+		try {
+			if(Integer.parseInt(joinPoint.getArgs()[0]) > 0)
+			
+			rev = joinPoint.proceed();
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
+		
+		return rev;
+	}
+}

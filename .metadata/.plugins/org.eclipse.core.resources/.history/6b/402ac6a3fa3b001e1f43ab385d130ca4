@@ -1,0 +1,7 @@
+package aop_p.webToon;
+
+public class KangBada {
+	public KangFish fishing() {
+		return null;
+	}
+}

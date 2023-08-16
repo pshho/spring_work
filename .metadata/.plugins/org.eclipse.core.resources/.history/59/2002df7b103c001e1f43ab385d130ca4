@@ -1,0 +1,16 @@
+package figure;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import figure.parts.Rectangle;
+
+@Configuration
+@ComponentScan("figure.parts")
+public class Figure {
+	@Bean
+	Rectangle rectangle() {
+		return new Rectangle(5, 4);
+	}
+}

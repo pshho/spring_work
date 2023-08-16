@@ -1,0 +1,16 @@
+package figure;
+
+import org.springframework.stereotype.Component;
+
+import figure.parts.Rectangle;
+
+@Component
+public class Figure {
+	public Rectangle rect;
+
+	public Figure() {
+		super();
+		this.rect = new Rectangle();
+	}
+
+}

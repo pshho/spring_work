@@ -1,0 +1,19 @@
+package figure.parts;
+
+public class RightTriangle {
+	public int area, perimeter;
+
+	public RightTriangle() {
+		super();
+	}
+	
+	public int rigTriArea(int width, int height) {
+		area = width*height;
+		return area;
+	}
+	
+	public int rigTriPerimeter(int width, int height, int hypotenuse) {
+		perimeter = (width + height) * 2; 
+		return perimeter;
+	}
+}

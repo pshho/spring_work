@@ -1,0 +1,9 @@
+package aop_p.adv;
+
+public class AroundAdvice {
+	Object arTest(ProcedingJoinPoint joinPoint) {
+		Object res = null;
+		
+		return res;
+	}
+}

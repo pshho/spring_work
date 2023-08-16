@@ -1,0 +1,12 @@
+package fishing.advice;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class FishingAdvice {
+	Object fishAdvice() {
+		Object rev = null;
+		
+		return rev;
+	}
+}

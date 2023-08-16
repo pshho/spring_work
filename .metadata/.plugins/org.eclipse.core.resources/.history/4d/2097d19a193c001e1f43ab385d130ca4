@@ -1,0 +1,19 @@
+package figure.parts;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Rectangle {
+	public int rectArea, rectPerimeter;
+	
+	public Rectangle() {
+		super();
+	}
+
+	
+	
+	public int perimeterRect(int width, int height) {
+		rectPerimeter = (width + height) * 2; 
+		return rectPerimeter;
+	}
+}

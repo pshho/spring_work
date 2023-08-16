@@ -1,0 +1,22 @@
+package aop_p.adv;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class AroundAdvice {
+	Object arTest(ProceedingJoinPoint joinPoint) {
+		Object res = null;
+		
+		System.out.println(" >> arTest 진입" + joinPoint.toString());
+		
+		// joinPoint.proceed로 검사하는 method를 실행시킬 수 있음
+		try {
+			res = joinPoint.proceed();
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println(">> arTest 진입 완료");
+		
+		return res;
+	}
+}

@@ -1,0 +1,36 @@
+package figure;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Figures {
+	public int areaRect(int width, int height) {
+		int rectArea = width*height;
+		return rectArea;
+	}
+	
+	public int perimeterRect(int width, int height) {
+		int rectPerimeter = (width + height) * 2; 
+		return rectPerimeter;
+	}
+	
+	public int areaRigTri(int width, int height) {
+		int rigTriArea = (width+height)/2;
+		return rigTriArea;
+	}
+	
+	public int perimeterRigTri(int width, int height, int hypotenuse) {
+		int rigTriPerimeter = width + height + hypotenuse; 
+		return rigTriPerimeter;
+	}
+	
+	public double areaCircle(int radius) {
+		double circleArea = radius*radius*Math.PI;
+		return circleArea;
+	}
+	
+	public double perimeterCircle(int radius) {
+		double circlePerimeter = radius*2*Math.PI; 
+		return circlePerimeter;
+	}
+}

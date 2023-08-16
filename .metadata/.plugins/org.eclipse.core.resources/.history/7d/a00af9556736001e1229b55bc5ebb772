@@ -1,6 +1,0 @@
-package schools;
-
-public class Subjects {
-	String name;
-	int score;
-}

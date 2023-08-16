@@ -1,0 +1,37 @@
+package aop_p.adv;
+
+import java.util.Arrays;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class FishAdvice {
+	Object fishTest(ProceedingJoinPoint joinPoint) {
+		Object res = null;
+		
+		System.out.println(" >> 진입 : " + joinPoint.toShortString()); // 매개변수 들어온 데이터 값
+		Object[] arr = joinPoint.getArgs();
+		String[] stArr = (String[])(joinPoint.getArgs()[0]);
+		System.out.println(" >> args : " + Arrays.toString(stArr)); // 클래스의 method의 주소(같은 주소)
+		
+		
+		// joinPoint.proceed로 검사하는 method를 실행시킬 수 있음
+		try {
+			if(joinPoint.getArgs().length >= 2) {
+				joinPoint.getArgs()[1] = "엄마상어";
+				System.out.println(" >> 변경한 args " + Arrays.toString(joinPoint.getArgs()));
+			}
+			res = joinPoint.proceed();
+			
+			// method의 실제 로직은 못바꾸지만 실행 후의 return은 바뀔 수 있음
+			if(res.equals("애봉")) {
+				res = "조준";
+			}
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println(" >> arTest 진입 완료");
+		
+		return res;
+	}
+}

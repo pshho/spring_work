@@ -1,9 +1,0 @@
-package bicycleComponent;
-
-public class BicycleMove {
-
-	public static void main(String[] args) {
-
-	}
-
-}

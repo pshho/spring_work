@@ -1,9 +1,0 @@
-package vehicle;
-
-public interface VehicleCategory {
-	String category = "자전거";
-	
-	void go();
-	void repair();
-	void fall();
-}
