@@ -1,0 +1,28 @@
+package orders.order;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Menu {
+	Map<String, Map<String, Integer>> menus = new HashMap<>();
+	
+	@Autowired
+	Food fd;
+	
+	public void addMenu(String kinds) {
+		if(menus.containsKey(kinds)) {
+			menus.get(kinds).putAll(fd.menu);
+		}else {
+			menus.put(kinds, fd.menu);
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "Menu [menus=" + menus + ", fd=" + fd + "]";
+	}
+}

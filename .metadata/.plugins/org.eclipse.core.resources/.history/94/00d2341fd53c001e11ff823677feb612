@@ -1,0 +1,22 @@
+package orders.order;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Restaurant {
+	Map<String, Map<String, Integer>> menus;
+	public int deliveryFee;
+	
+	public Restaurant(String kinds) {
+		menus = new HashMap<>();
+		menus.put(kinds, new HashMap<>());
+	}
+	
+	public void menuAppend(String kinds, String menu, int price) {
+		menus.get(kinds).put(menu, price);
+	}
+	
+	public int orderCalc(String menu) {
+		return 0;
+	}
+}

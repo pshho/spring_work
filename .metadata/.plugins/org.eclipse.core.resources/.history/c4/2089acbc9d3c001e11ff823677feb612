@@ -1,0 +1,44 @@
+package studentAop;
+
+import java.util.Map;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Student {
+	String category, name;
+	Map<String, Integer> subjects;
+	int sum;
+	float avg;
+	
+	public Student() {
+		super();
+	}
+
+	public Student(String name, Map<String, Integer> subjects) {
+		super();
+		this.name = name;
+		this.subjects = subjects;
+	}
+
+	public float getAvg() {
+		return avg;
+	}
+	
+	public Map<String, Integer> getSubjects() {
+		return subjects;
+	}
+	
+	void calc(Map<String, Integer> subjects) {
+		for(Map.Entry<String, Integer> sub : subjects.entrySet()) {
+			sum += sub.getValue();
+		}
+		avg = sum / subjects.size();
+	}
+
+	@Override
+	public String toString() {
+		return "Students [category=" + category + ", name=" + name + ", subjects=" + subjects + ", sum=" + sum
+				+ ", avg=" + avg + "]";
+	}
+}

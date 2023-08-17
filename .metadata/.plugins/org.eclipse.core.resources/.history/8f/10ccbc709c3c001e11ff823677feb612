@@ -1,0 +1,19 @@
+package studentAop;
+
+import java.util.HashMap;
+
+public class Students {
+	HashMap<String, Integer> subjects = new HashMap<>();
+	
+	public Student std1() {
+		subjects.put("국어", 77);
+		subjects.put("수학", 89);
+		return new Student("일", subjects);
+	}
+	
+	public Student std2() {
+		subjects.put("국어", 57);
+		subjects.put("수학", 61);
+		return new Student("이", subjects);
+	}
+}

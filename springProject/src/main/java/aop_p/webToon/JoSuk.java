@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class JoSuk {
 	public String dog1(int aa, String bb) {
-		System.out.println("센세이션 " + aa + bb);
+		System.out.println("센세이션 " + aa + ", " + bb);
 		return "센세이션";
 	}
 	
@@ -15,7 +15,11 @@ public class JoSuk {
 	}
 	
 	public int papa(int cc) {
-		System.out.println("초절왕"+cc);
+		System.out.println("조철왕"+cc);
 		return 4000;
+	}
+	
+	public void nums(int c) {
+		System.out.println("nums : " + 100/c);
 	}
 }

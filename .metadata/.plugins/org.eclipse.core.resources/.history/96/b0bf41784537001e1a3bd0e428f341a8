@@ -1,5 +1,0 @@
-package mobile;
-
-public class Battery {
-	int size, capacity;
-}

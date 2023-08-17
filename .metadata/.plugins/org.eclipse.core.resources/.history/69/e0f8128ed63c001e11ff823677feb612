@@ -1,0 +1,21 @@
+package orders.main;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import orders.order.KorFood;
+import orders.order.Restaurant;
+
+public class StoreMain {
+
+	public static void main(String[] args) {
+		AbstractApplicationContext context =
+				new ClassPathXmlApplicationContext("aop_xml/store.xml");
+		
+		KorFood kf = context.getBean("korFood", KorFood.class);
+		kf.setMenu("찌개", 9000);
+		kf.setMenu("덮밥", 10000);
+		
+	}
+
+}

@@ -1,9 +1,0 @@
-package di_p.main;
-
-public class LookupMain {
-
-	public static void main(String[] args) {
-
-	}
-
-}

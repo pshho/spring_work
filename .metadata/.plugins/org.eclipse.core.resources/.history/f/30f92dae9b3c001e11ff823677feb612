@@ -1,0 +1,15 @@
+package studentAop;
+
+import java.util.HashMap;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class Students {
+	HashMap<String, Integer> subjects = new HashMap<>();
+	@Bean
+	Student std1() {
+		return new Student("일", new HashMap<String, Integer>());
+	}
+}

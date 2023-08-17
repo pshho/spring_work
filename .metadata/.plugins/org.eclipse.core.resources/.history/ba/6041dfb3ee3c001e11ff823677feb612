@@ -1,0 +1,31 @@
+package orders.order;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Restaurant {
+	@Autowired
+	Menu mu;
+	
+	int deliveryFee = 3000;
+	
+	public int orderCalc(String kinds, String... menu) {
+		Map<String, Map<String, Integer>> mmu = mu.getMenus();
+		int price = 0;
+		
+		for(Map.Entry<String, Map<String, Integer>> me : mmu.entrySet()) {
+			if(mmu.containsKey(kinds)) {
+				for(String mme : menu) {
+					if(me.getKey().equals(mme)) {
+						price += Integer.parseInt(me.getValue()+"");
+					}
+				}
+			}
+		}
+		
+		return price;
+	}
+}

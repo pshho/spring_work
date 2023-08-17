@@ -1,7 +1,0 @@
-package mobile;
-
-public class Display {
-	String displayKinds, filter;
-	int pixel;
-	
-}

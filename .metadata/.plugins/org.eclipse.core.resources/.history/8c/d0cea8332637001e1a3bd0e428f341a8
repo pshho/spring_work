@@ -1,9 +1,0 @@
-package diet;
-
-public class Cooking {
-	public DinnerMenu breakfast() {
-		String msg = null;
-		System.out.println(msg);
-		return new DinnerMenu();
-	}
-}

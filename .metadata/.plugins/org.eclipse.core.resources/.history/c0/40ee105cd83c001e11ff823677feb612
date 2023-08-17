@@ -1,0 +1,12 @@
+package orders.order;
+
+import java.util.Map;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Menu {
+	Map<String, Map<String, Integer>> menus;
+	
+	
+}

@@ -1,6 +1,0 @@
-package mobile;
-
-public class SmartPhone {
-	String name;
-	Camera cam;
-}

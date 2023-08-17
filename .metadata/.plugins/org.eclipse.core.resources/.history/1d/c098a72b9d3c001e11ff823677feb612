@@ -1,0 +1,15 @@
+package studentAop.main;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import studentAop.Students;
+
+public class StudentMain {
+	public static void main(String[] args) {
+		ApplicationContext context =
+				new AnnotationConfigApplicationContext(Students.class);
+		
+		System.out.println(context.getBean("std1"));
+	}
+}

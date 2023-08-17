@@ -1,0 +1,12 @@
+package orders.order;
+
+import java.util.Map;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class KorFood {
+	String kinds = "한식";
+	Map<String, Integer> menu;
+	
+}

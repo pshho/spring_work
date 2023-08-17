@@ -1,9 +1,0 @@
-package diet;
-
-public class Cooking {
-	public DinnerMenu breakfast() {
-		String msg = null;
-		System.out.println(msg);
-		return new DinnerMenu("쌀밥", "소고기무국", "멸치", "계란말이");
-	}
-}
