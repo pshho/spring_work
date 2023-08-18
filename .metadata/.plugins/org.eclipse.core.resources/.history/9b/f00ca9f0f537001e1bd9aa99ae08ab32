@@ -1,9 +1,0 @@
-package studentsGrade;
-
-import java.util.List;
-
-public class Classess {
-	List<Student> stds;
-	
-	
-}
