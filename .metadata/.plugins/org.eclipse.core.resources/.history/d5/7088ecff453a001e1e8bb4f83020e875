@@ -1,7 +1,0 @@
-package coffeeAssignment.coffeeKinds;
-
-public class Americano {
-	String coffeeBeans = "콜롬비아";
-	int capacity = 250;
-	int price = 2000;
-}

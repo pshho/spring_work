@@ -1,9 +1,0 @@
-package anno_p.com;
-
-import anno_p.com.sub1.Mouse;
-
-public class Notebook {
-	ComputerBody cmb;
-	Mouse mouse;
-	String name = "삼보그램";
-}

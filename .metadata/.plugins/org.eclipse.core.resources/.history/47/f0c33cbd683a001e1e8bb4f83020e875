@@ -1,6 +1,0 @@
-package coffeeConfig.ingredient;
-
-public class Milk {
-	String name = "우유";
-	int capacity;
-}

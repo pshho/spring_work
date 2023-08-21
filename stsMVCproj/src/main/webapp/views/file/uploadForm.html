@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>uploadForm</title>
+</head>
+<body>
+	<h1>uploadForm</h1>
+	<h2>upload1</h2>
+	<form action="upload" method="post" enctype="multipart/form-data" name="file">
+		<table border="">
+			<tr>
+				<td>id</td>
+				<td><input type="text" name="id" /></td>
+			</tr>
+			<tr>
+				<td>age</td>
+				<td><input type="text" name="age" /></td>
+			</tr>
+			<tr>
+				<td>ff1</td>
+				<td><input type="file" name="ff1" /></td>
+			</tr>
+			<tr>
+				<td>ff2</td>
+				<td><input type="file" name="ff2" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<input type="submit" value="입력1" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	<h2>upload2</h2>
+	<form action="upload2" method="post" enctype="multipart/form-data">
+		<table border="">
+			<tr>
+				<td>id</td>
+				<td><input type="text" name="id" /></td>
+			</tr>
+			<tr>
+				<td>age</td>
+				<td><input type="text" name="age" /></td>
+			</tr>
+			<tr>
+				<td>ff1</td>
+				<td><input type="file" name="ff1" /></td>
+			</tr>
+			<tr>
+				<td>ff2</td>
+				<td><input type="file" name="ff2" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<input type="submit" value="입력2" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	<h2>upload3</h2>
+	<form action="upload3" method="post" enctype="multipart/form-data">
+		<table border="">
+			<tr>
+				<td>id</td>
+				<td><input type="text" name="id" /></td>
+			</tr>
+			<tr>
+				<td>age</td>
+				<td><input type="text" name="age" /></td>
+			</tr>
+			<tr>
+				<td>ff1</td>
+				<td><input type="file" name="ff1" /></td>
+			</tr>
+			<tr>
+				<td>ff2</td>
+				<td>
+					<th:block th:if="${ msg != null }">
+						<p th:text="${msg}" style="color: red;"></p>
+					</th:block>
+					<input type="file" name="ff2" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<input type="submit" value="입력3" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

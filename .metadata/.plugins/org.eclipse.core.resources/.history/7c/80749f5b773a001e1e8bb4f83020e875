@@ -1,8 +1,0 @@
-package anno_p;
-
-public class AnnoConfig {
-	
-	Bicycle mtb() {
-		return new Bicycle();
-	}
-}

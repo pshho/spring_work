@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>orderReg</title>
+</head>
+<body>
+	<h1>orderReg</h1>
+	<table border="">
+		<tr>
+			<td>제품</td>
+			<td>단가</td>
+			<td>수량</td>
+			<td>총계</td>
+		</tr>
+		<tr th:each="pd:${od.arr}">
+			<td><input type="text" name="" th:value="${ pd.pname }" /></td>
+			<td><input type="text" name="" th:value="${ pd.price }" /></td>
+			<td><input type="text" name="" th:value="${ pd.cnt }" /></td>
+			<td><input type="text" name="" th:value="${ pd.total }" /></td>
+		</tr>
+		<tr>
+			<td>합계</td>
+			<td colspan="3" align="right">[[${od.sum}]]</td>
+		</tr>
+		<tr>
+			<td rowspan="3">주소</td>
+			<td>우편번호</td>
+			<td colspan="2"><input type="text" name="" th:value="${ od.ad.zipcode }" style="width: 98%;" /></td>
+		</tr>
+		<tr>
+			<td>기본주소</td>
+			<td colspan="2"><input type="text" name="" th:value="${ od.ad.zipcode }" style="width: 98%;" /></td>
+		</tr>
+		<tr>
+			<td>상세주소</td>
+			<td colspan="2"><input type="text" name="" th:value="${ od.ad.zipcode }" style="width: 98%;" /></td>
+		</tr>
+		<tr>
+			<td colspan="4" align="right">
+				<input type="submit" value="제출" />
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

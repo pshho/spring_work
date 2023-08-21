@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>coffee1</title>
+<script>
+	function coffClk(){
+		let form = document.cofOrd;
+		form.action = "?";
+		form.submit();
+	}
+</script>
+</head>
+<body>
+	<h1>coffee1</h1>
+	<form action="coffeeOrd" name="cofOrd">
+		<table border="">
+			<tr>
+				<td>
+					주문
+					<select name="coffee" id="" onchange="coffClk()">
+						<option value="아메리카노" th:selected="${ cof.coffee == '아메리카노' }">
+							아메리카노
+						</option>
+						<option value="아프리카노" th:selected="${ cof.coffee == '아프리카노' }">
+							아프리카노
+						</option>
+						<option value="아시아노" th:selected="${ cof.coffee == '아시아노' }">
+							아시아노
+						</option>
+					</select>
+				</td>
+				<td>
+					수량
+					<input type="number" name="cnt" />
+				</td>
+				<td>
+					금액
+					<input type="number" name="price" th:value="${ cof.price }" />
+				</td>
+				<td><input type="submit" value="주문" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

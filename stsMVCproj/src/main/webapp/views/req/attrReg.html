@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>난 attr</title>
+</head>
+<body>
+	<h1>난 attr</h1>
+	age: [[${ age }]] <br />
+	pname: [[${ pname }]] <br />
+	jum: [[${ jum }]] <br />
+	<hr />
+	<th:block th:each="j:${jum}">
+		[[${j}]]
+	</th:block>
+	<hr />
+	now: [[${ now }]] <br />
+	per: [[${ per }]] <br />
+		[[${ person.pname }]], [[${ person.mil }]] <br />
+	
+</body>
+</html>
