@@ -18,7 +18,7 @@ public class UploadData {
 		if(ff2Name == null) {
 			this.ff2Name = ff2.getOriginalFilename();
 		}else {
-			this.ff2Name = ff2Name;
+			this.ff2Name = ff2Name; 
 		}
 	}
 }
