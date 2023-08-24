@@ -17,7 +17,7 @@
 		</tr>
 		<tr>
 			<td>ff1</td>
-			<td th:text="${uploadData.ff1Name}"></td>
+			<td><a th:href="|download?fd=${ uploadData.ff1Name }|">[[${uploadData.ff1Name}]]</a></td>
 		</tr>
 		<tr>
 			<td>ff2</td>

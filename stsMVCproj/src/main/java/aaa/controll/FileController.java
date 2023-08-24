@@ -1,8 +1,10 @@
 package aaa.controll;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.util.regex.Pattern;
 
 import org.springframework.stereotype.Controller;
@@ -15,6 +17,9 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import aaa.model.UploadData;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @Controller
 @RequestMapping("/file")
@@ -186,5 +191,34 @@ public class FileController {
 				fileName.toLowerCase()); 
 		
 		return check;
+	}
+	
+	@RequestMapping("download")
+	void download(
+			String fd,
+			HttpServletRequest req,
+			HttpServletResponse res) {
+		String path = req.getServletContext().getRealPath("up");
+		path = "D:\\spring_work\\stsMVCproj\\src\\main\\webapp\\up";
+		try {
+			FileInputStream fis = new FileInputStream(path+"\\"+fd);
+			String encName = URLEncoder.encode(fd, "utf-8");
+			res.setHeader("Content-Disposition", "attachment;filename="+encName);
+			
+			ServletOutputStream sos = res.getOutputStream();
+			byte[] buf = new byte[1024];
+			
+			while(fis.available() > 0) {
+				int len = fis.read(buf);
+				sos.write(buf, 0, len);
+			}
+			
+			sos.close();
+			fis.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 	}
 }

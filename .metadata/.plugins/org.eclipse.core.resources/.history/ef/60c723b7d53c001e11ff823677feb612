@@ -1,6 +1,0 @@
-package orders.order;
-
-public class KorFood {
-	String kinds = "한식";
-	String menu;
-}

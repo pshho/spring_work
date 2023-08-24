@@ -1,9 +1,0 @@
-package figure.parts;
-
-public class Circle {
-	public int circleArea, circlePerimeter;
-
-	public Circle() {
-		super();
-	}
-}

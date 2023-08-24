@@ -1,9 +1,0 @@
-package figure.parts;
-
-public class RightTriangle {
-	public int area, perimeter;
-
-	public RightTriangle() {
-		super();
-	}
-}

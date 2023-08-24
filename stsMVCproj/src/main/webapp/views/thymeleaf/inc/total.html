@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<!-- lalala에 title이 없으면 이 페이지 title이 출력됨 -->
+<title>thymeleaf / lalala / inc / total</title>
+</head>
+<body>
+	<h1>thymeleaf / lalala / inc / total</h1>
+	<table border="">
+		<tr>
+			<td colspan="2">
+				<th:block th:replace="|thymeleaf/inc/${headerUrl}|" />
+			</td>
+		</tr>
+		<tr>
+			<td width="200px">
+				<th:block th:replace="thymeleaf/inc/aside" />
+			</td>
+			<td width="500px">
+				<th:block th:replace="thymeleaf/inc/bbbody" />
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<th:block layout:fragment="fffoter" />
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

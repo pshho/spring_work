@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>model / season / view</title>
+</head>
+<body>
+	<h1>model / season / view</h1>
+	<table border="">
+		<tr align="center">
+			<td th:replace="|model/inc/${header}|"></td>
+		</tr>
+		<tr>
+			<td width="200px">
+				<th:block th:replace="model/inc/aside" />
+			</td>
+			<td th:colspan="${#maps.size(hNav.menubar)}">
+				<th:block th:replace="model/inc/main_gallery" />
+			</td>
+		</tr>
+		<tr align="center">
+			<td th:colspan="${#maps.size(hNav.menubar)}">
+				<th:block layout:fragment="fffoter" />
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="thymeleaf/inc/total">
+<head>
+<meta charset="UTF-8">
+<!-- title은 total이 아닌 이 페이지가 우선권 -->
+<title>thymeleaf / lalala</title>
+</head>
+<body>
+	<h1>thymleaf / lalala - no 의미</h1>
+	<th:block layout:fragment="md">
+		md의 내용을 여기다 적으세요
+	</th:block>
+	<th:block layout:fragment="fffoter">
+		fffoter의 내용을 여기다 적으세요
+	</th:block>
+</body>
+</html>

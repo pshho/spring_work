@@ -7,4 +7,8 @@ import lombok.Data;
 @AllArgsConstructor
 public class Member {
 	String id, pw, name, email, gender;
+
+	public Member() {
+		super();
+	}
 }

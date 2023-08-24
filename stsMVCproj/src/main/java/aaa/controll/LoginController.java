@@ -21,7 +21,7 @@ public class LoginController {
 			@CookieValue(value = "id", required = false) String id,
 			@CookieValue(value = "name", required = false) String name) {
 		System.out.println("login");
-		ModelAndView mav = new ModelAndView("login/login");
+		ModelAndView mav = new ModelAndView("loginCookie/login");
 		
 		System.out.println(id + ", " + name);
 		
@@ -59,7 +59,7 @@ public class LoginController {
 			return "redirect:login";
 		}
 		
-		return "login/loginReg";
+		return "loginCookie/loginReg";
 	}
 	
 	@RequestMapping("logout")

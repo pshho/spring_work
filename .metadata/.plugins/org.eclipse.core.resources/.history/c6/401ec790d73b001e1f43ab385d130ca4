@@ -1,8 +1,0 @@
-package aop_p.webToon;
-
-public class JoSuk {
-	public String dog1() {
-		System.out.println("센세이션");
-		return "센세이션";
-	}
-}

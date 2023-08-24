@@ -1,7 +1,0 @@
-package figure;
-
-import figure.parts.Rectangle;
-
-public class Figure {
-	Rectangle rect;
-}

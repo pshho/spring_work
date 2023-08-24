@@ -19,4 +19,14 @@ public class ThymeleafController {
 		md.addAttribute("pid", "qqq");
 		return "thymeleaf/control";
 	}
+	
+	@RequestMapping("lay")
+	String lay(Model md) {
+		System.out.println("lay");
+		md.addAttribute("headerUrl", "hd_2");
+		md.addAttribute("pid", "aaa");
+		md.addAttribute("arr", new int[] {22,33,44,55});
+		md.addAttribute("age", 36);
+		return "thymeleaf/lalala";
+	}
 }

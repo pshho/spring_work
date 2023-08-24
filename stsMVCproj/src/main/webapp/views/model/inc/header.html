@@ -1,0 +1,4 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<td th:each="md, i:${hNav.menubar}">
+	<a th:href="${md.key}" th:text="${md.value}"></a>
+</td>
