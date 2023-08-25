@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>학생 점수 입력</title>
+<style>
+	td > p {
+		color: red;
+	}
+</style>
+</head>
+<body>
+	<h1>학생 점수 입력</h1>
+	<form action="" method="post" th:object="${studentValid}">
+		<table border="">
+			<tr>
+				<td>이름</td>
+				<td colspan="2">
+					<input type="text" th:field="*{name}" />
+					<p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="4">과목</td>
+				<tr>
+					<td>국어</td>
+					<td>
+						<input type="text" th:field="*{kor}" />
+						<p th:if="${#fields.hasErrors('kor')}" th:errors="*{kor}"></p>
+					</td>
+				</tr>
+				<tr>
+					<td>영어</td>
+					<td>
+						<input type="text" th:field="*{eng}" />
+						<p th:if="${#fields.hasErrors('eng')}" th:errors="*{eng}"></p>
+					</td>
+				</tr>
+				<tr>
+					<td>수학</td>
+					<td>
+						<input type="text" th:field="*{math}" />
+						<p th:if="${#fields.hasErrors('math')}" th:errors="*{math}"></p>
+					</td>
+				</tr>
+			</tr>
+			<tr>
+				<td colspan="3" align="right">
+					<input type="submit" value="등록" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

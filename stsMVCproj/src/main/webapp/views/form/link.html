@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>form / link</title>
+</head>
+<body>
+	<h1>form / link</h1>
+	<a href="aaa">aaa</a> <br />
+	<a th:href="@{bbb}">bbb</a> <br />
+	<a href="/ccc">ccc</a> <br /> <!-- '/' - 내 root부터 시작한다는 의미 -->
+	<a th:href="@{/ddd}">ddd</a> <br />
+	<a th:href="@{${cate1}}">[[${cate1}]]</a> <br />
+	<a th:href="${cate2}">[[${cate2}]]</a> <br />
+	<!--<a th:href="ggg(pid=zx,age=14)">ggg</a>-->
+	<a th:href="@{hhh(id=zx,age=14)}">hhh</a> <br />
+	<a th:href="@{iii(id=${id},age=${age},pname=${pname})}">iii</a> <br />
+	<a th:href="@{${cate1}(id=${id},age=${age},pname=${pname},gender=${gender},no=${no})}">[[${cate1}]]</a> <br />
+	<a th:href="@{|${cate1}/${cate2}|(id=${id},age=${age},pname=${pname},gender=${gender},no=${no})}">[[${cate1}]]/[[${cate2}]]</a> <br />
+	<a th:href="|${cate1}/${cate2}?id=${pid}&age=${age}&no=${no}|">[[|${cate1}/${cate2}|]]</a> <br />
+</body>
+</html>

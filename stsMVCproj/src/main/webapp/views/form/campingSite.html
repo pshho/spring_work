@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>campingSite</title>
+<script src="https://code.jquery.com/jquery-3.7.0.js" 
+integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" 
+crossorigin="anonymous"></script>
+<style>
+	form {
+		width: 800px;
+		margin: 20px auto;
+	}
+	form > table {
+		width: 700px;
+	}
+</style>
+<script>
+	$(document).ready(function(){
+		$('#minPerRange, #maxPerRange').change(function(){
+			$('#minPer').val($('#minPerRange').val());
+			$('#maxPer').val($('#maxPerRange').val());
+		});
+		
+		$('#addSites').on(function(){
+			
+		});
+	});
+	
+</script>
+</head>
+<body>
+	<h1>campingSite</h1>
+	<form action="#" th:object="${camping}" name="siteForm">
+		<table border="">
+			<tr>
+				<td>사이트 종류</td>
+				<td>
+					<label for="siteType">타입</label>
+					<input type="text" id="siteType" />
+				</td>
+				<td align="right"><input type="button" id="addSites" value="추가" /></td>
+			</tr>
+			<tr>
+				<td>크기</td>
+				<td colspan="2">
+					
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="4">인원</td>
+				<tr align="center">
+					<td><label for="">최소인원</label></td>
+					<td><label for="">최대인원</label></td>
+				</tr>
+				<tr>
+					<td><input type="number" id="minPer" readonly /></td>
+					<td><input type="number" id="maxPer" readonly /></td>
+				</tr>
+				<tr align="center">
+					<td><input type="range" value="0" min="0" max="15" id="minPerRange" /></td>
+					<td><input type="range" value="0" min="0" max="30" id="maxPerRange" /></td>
+				</tr>
+			</tr>
+			<tr>
+				<td>수량</td>
+				<td colspan="2"><input type="number" min="0" /></td>
+			</tr>
+			<tr>
+				<td>입/퇴실 시간</td>
+				<td colspan="2"><input type="time" /> - <input type="time" /></td>
+			</tr>
+			<tr>
+				<td colspan="4" align="right">
+					<input type="submit" value="등록" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
