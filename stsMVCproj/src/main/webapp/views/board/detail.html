@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>board/detail</title>
+<style>
+	img {
+		width: 500px;
+	}
+</style>
+</head>
+<body>
+	<h1>board/detail</h1>
+	<table border="">
+		<tr>
+			<td>제목</td>
+			<td th:text="${mainData.title}"></td>
+			<td>조회수</td>
+			<td th:text="${mainData.cnt}"></td>
+		</tr>
+		<tr>
+			<td>작성자</td>
+			<td th:text="${mainData.pname}"></td>
+			<td>작성일</td>
+			<td th:text="${mainData.regDate}"></td>
+		</tr>
+		<tr>
+			<td>내용</td>
+			<td colspan="3">
+				<textarea cols="70" rows="10" th:text="${mainData.content}" readonly></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>파일</td>
+			<td colspan="3">
+				<img th:src="|/up/${mainData.upfile}|" alt="등록 파일" />
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4" align="right">
+				<a th:href="|/board/modify/${mainData.id}|">수정</a>
+				<a th:href="|/board/delete/${mainData.id}|">삭제</a>
+				<a href="/board/list">목록으로</a>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

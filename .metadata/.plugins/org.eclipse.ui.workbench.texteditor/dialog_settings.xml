@@ -8,8 +8,8 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="&#x09;@Min(0)"/>
 			<item value="mybatis"/>
+			<item value="&#x09;@Min(0)"/>
 			<item value="myba"/>
 			<item value="collection"/>
 		</list>
