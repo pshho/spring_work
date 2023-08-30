@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 public class BoardDTO {
 	int id, cnt;
-	String title, pname, pw, upfile, content;
+	String title, pname, pw, upfile, content, grade;
 	Date regDate;
 	MultipartFile mpf;
 	

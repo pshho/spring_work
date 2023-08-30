@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC ".//mybatis.org/DTD Mapper3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="aaa.service.MyBatisMapper">
+	<select id="list" resultType="bDto">
+		select * from board
+	</select>
+	<select id="listSch" resultType="bDto" parameterType="bDto">
+		select * from board
+		<where>
+			<if test="title!=null">
+				title like concat('%', #{title}, '%')
+			</if>
+			<if test="pname!=null">
+				and pname like concat('%', #{pname}, '%')
+			</if>
+		</where>
+	</select>
+	
+	<select id="cntSch" resultType="bDto" parameterType="bDto">
+		select * from board
+		<where>
+			<if test="grade!=null">
+				<choose>
+					<when test="grade == 'high'">
+						cnt > 10
+					</when>
+					<when test="grade == 'middle'">
+						cnt > 5 and cnt &lt;= 10
+					</when>
+					<otherwise>
+						cnt &lt;= 5
+					</otherwise>
+				</choose>
+			</if>
+		</where>
+	</select>
+	
+	<insert id="insert" parameterType="bDto">
+		insert into board(title, pname, pw, content, upfile, reg_date, cnt, seq, lev)
+		values(#{title}, #{pname}, #{pw}, #{content}, #{upfile}, sysdate(), 0, 0 ,0)
+	</insert>
+	<delete id="delete" parameterType="bDto">
+		delete from board where id = #{id} and pw = #{pw}
+	</delete>
+	<update id="modify" parameterType="bDto">
+		update board set title = #{title}, pname = #{pname}, content = #{content}, upfile = #{upfile}
+		where id = #{id} and pw = #{pw}
+	</update>
+</mapper>
