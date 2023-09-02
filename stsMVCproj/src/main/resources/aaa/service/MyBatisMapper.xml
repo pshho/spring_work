@@ -7,8 +7,8 @@ PUBLIC ".//mybatis.org/DTD Mapper3.0//EN"
 	<select id="list" resultType="bDto">
 		select * from board
 	</select>
-	<select id="listSch" resultType="bDto" parameterType="bDto">
-		select * from board
+	
+	<sql id="wh_1">
 		<where>
 			<if test="title!=null">
 				title like concat('%', #{title}, '%')
@@ -17,6 +17,11 @@ PUBLIC ".//mybatis.org/DTD Mapper3.0//EN"
 				and pname like concat('%', #{pname}, '%')
 			</if>
 		</where>
+	</sql>
+	
+	<select id="listSch" resultType="bDto" parameterType="bDto">
+		select * from board
+		<include refid="wh_1" />
 	</select>
 	
 	<select id="cntSch" resultType="bDto" parameterType="bDto">
@@ -38,15 +43,43 @@ PUBLIC ".//mybatis.org/DTD Mapper3.0//EN"
 		</where>
 	</select>
 	
-	<insert id="insert" parameterType="bDto">
-		insert into board(title, pname, pw, content, upfile, reg_date, cnt, seq, lev)
-		values(#{title}, #{pname}, #{pw}, #{content}, #{upfile}, sysdate(), 0, 0 ,0)
+	<sql id="max_1">
+		(select max(id)+1 from board maxd)
+	</sql>
+	
+	<insert id="insertList" parameterType="java.util.List">
+		insert into board(title, pname, pw, content, reg_date, cnt, seq, lev, id, gid)
+		values
+		<foreach collection="list" item="bDto" separator=", " index="i">
+			(#{bDto.title}, #{bDto.pname}, #{bDto.pw}, #{bDto.content}, sysdate(), 0, 0, 0,
+			<include refid="max_1"/>, <include refid="max_1"/>)
+		</foreach>
 	</insert>
-	<delete id="delete" parameterType="bDto">
-		delete from board where id = #{id} and pw = #{pw}
+	
+	<insert id="insertDTOs" parameterType="bDtos">
+		insert into board(title, pname, pw, content, reg_date, cnt, seq, lev)
+		values
+		<foreach collection="arr" item="dd" separator=", ">
+			(#{dd.title}, #{dd.pname}, #{dd.pw}, #{ct}, sysdate(), #{no}, 0, 0)
+		</foreach>
+	</insert>
+	
+	<!-- 여러 개의 파라미터를 받을 때 자료형 명시하지 않고 변수 이름으로 접근 -->
+	<delete id="delete">
+		delete from board where id=#{id} and pw=#{pw}
 	</delete>
-	<update id="modify" parameterType="bDto">
-		update board set title = #{title}, pname = #{pname}, content = #{content}, upfile = #{upfile}
-		where id = #{id} and pw = #{pw}
+	
+	<update id="modify" parameterType="map">
+		update board set title=#{title}, pname=#{pname}, content=#{content} where id=#{id} and pw=#{pw}
 	</update>
+	
+	<insert id="insert" parameterType="bDto">
+		<selectKey keyProperty="id" resultType="Integer" order="BEFORE">
+			select max(id)+1 from board
+		</selectKey>
+	
+		insert into board(title, pname, pw, content, reg_date, cnt, seq, lev, gid)
+		values
+		(#{title}, #{pname}, #{pw}, #{content}, sysdate(), 0, 0, 0, #{id})
+	</insert>
 </mapper>
